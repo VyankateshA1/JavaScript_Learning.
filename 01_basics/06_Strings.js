@@ -156,7 +156,7 @@
 // : 
 // ƒ [Symbol.iterator]()
 const name = "Vyan"
-const count = 24
+const count = 44
 
 // console.log(name + count + "value");
 
