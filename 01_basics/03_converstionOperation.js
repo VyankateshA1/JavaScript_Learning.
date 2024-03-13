@@ -35,8 +35,8 @@ console.log("1"+2)
 console.log("1"+"2");
 console.log(1+2+"2");
 
-let game = 100
-++game;
+let gameCount = 100
+++gameCount;
 console.log(game)
 
 
