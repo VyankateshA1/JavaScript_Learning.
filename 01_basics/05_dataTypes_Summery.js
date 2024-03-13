@@ -45,3 +45,22 @@ const myfunc = function(){
 
 myfunc()
 
+
+//*************************Stack And Heap**************** */
+//Stack (Primitive) & Heap (non-primitive)
+
+let msg = "hii, have a nice day. Good Morning..."
+let newMsg = msg
+newMsg = "Good AfterNoon...."
+console.log(msg);
+console.log(newMsg);
+
+let user={
+  email : "11@gmail.com",
+  id : 1211
+}
+let userTwo = user
+
+user.email = "abc@gmail.com"
+console.log(user);
+console.log(userTwo);
