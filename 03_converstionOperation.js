@@ -15,7 +15,7 @@ let valueNum = Number(score)
 // console.log(booleanLog)
 
 let num = 22
-let stringNum = String(num)
+let stringNum = String(num);
 console.log(stringNum);
 
 
