@@ -159,3 +159,5 @@ console.log(newArr);
 const newArr2 = arr.splice(1,3)
 console.log("c ",arr);
 console.log(newArr2);
+
+
