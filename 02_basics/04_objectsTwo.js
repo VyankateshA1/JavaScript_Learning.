@@ -42,10 +42,39 @@ const users = [
 
 ]
 
-console.log(users[0].id)
 
-console.log(Object.keys(instaUser))
-console.log(Object.values(instaUser))
-console.log(Object.entries(instaUser))
 
-console.log(instaUser.hasOwnProperty('name'));
+// console.log(Object.keys(instaUser))
+// console.log(Object.values(instaUser))
+// console.log(Object.entries(instaUser))
+
+// console.log(instaUser.hasOwnProperty('name'));
+
+
+
+// * distructure
+
+const me = {
+  name : 'vyankatesh',
+  study : 'student'
+} 
+// me.study
+
+// const {study} = me
+// console.log(study);
+
+const {study : s} = me
+console.log(s);
+
+// const nav = ()=>{
+
+// }
+// nav(com)
+
+// api
+
+// {
+//   name : "vyan"
+//   surname : "andhale",
+//   student : true
+// }
