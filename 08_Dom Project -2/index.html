@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <form id="bmi-form">
+        <div class="input-container">
+          <label for="age">Age : </label>
+          <input id="age" type="number" placeholder="Enter your age...." />
+        </div>
+        <div class="input-container">
+          <label for="age">Gender : </label>
+          <select id="gender" name="gender">
+            <option value=" " selected>Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div class="input-container">
+          <label for="age">Height : </label>
+          <input
+            id="height"
+            type="number"
+            placeholder="Enter your height...."
+          />
+        </div>
+        <div class="input-container">
+          <label for="age">Weight : </label>
+          <input
+            id="weight"
+            type="number"
+            placeholder="Enter your weight...."
+          />
+        </div>
+        <button type="submit" id="calculate">Calculate</button>
+      </form>
+      <div id="result">
+        <h3></h3>
+      </div>
+      <div class="bmi-guide">
+        <p>Healthy BMI range: 18.5 kg/m2 - 25 kg/m2</p>
+        <p>Healthy weight for the height: 59.9 kg - 81 kg</p>
+        <p>BMI Prime: 0.8</p>
+        <p>Ponderal Index: 11.1 kg/m3</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
