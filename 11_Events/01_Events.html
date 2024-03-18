@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    img {
+      height: 300px;
+      width: 300px;
+    }
+    li {
+      list-style: none;
+    }
+    a {
+      color: red;
+      font-size: 40px;
+    }
+  </style>
+  <body>
+    <h2>Images</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            id="one"
+            src="https://c.ndtvimg.com/2023-04/43div2to_animal-selfies_625x300_03_April_23.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            id="two"
+            src="https://i.pinimg.com/736x/95/9b/0e/959b0e7558d409e409de7e789d18e026.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            id="three"
+            src="https://i.pinimg.com/736x/ac/f4/19/acf419883cba2965c22cea23fa6ae3df.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            id="four"
+            src="https://as1.ftcdn.net/v2/jpg/05/66/83/16/1000_F_566831606_5K3NPz7LJxaHfcb0gWFLq56wnlWWD0xK.jpg"
+            alt=""
+          />
+        </li>
+        <li><a id="google" href="https://www.google.com/">Google</a></li>
+      </ul>
+    </div>
+
+    //
+    <script>
+      //attachEvent()
+      //onClick()
+      //jQuery - on.
+
+      // type , timeStamp, defaultPrevented, target, toElement, srcElement, currentTarget, ClientX, ClientY, screenX, screenY, AlyKey, ctrKey, shift, keyCode
+      // false is event Propegation
+      // document.getElementById("images").addEventListener(
+      //   "click",
+      //   function (e) {
+      //     // console.log(e);
+      //     // console.log(e.timeStamp);
+      //     // console.log(e.clientX);
+      //     console.log("You clicked inside ul ");
+      //   },
+      //   false
+      // );
+      // true will consider first higher order and false will consider the inside to out bubble order
+      // document.getElementById("one").addEventListener(
+      //   "click",
+      //   function (e) {
+      //     console.log("selfi of Cat and Dogs");
+      //     e.stopPropagation(); //for bubbling
+      //   },
+      //   false
+      // );
+      //
+      // document.getElementById("google").addEventListener("click", function (e) {
+      //   console.log("google Clicked");
+      //   e.preventDefault();
+      //   e.stopPropagation()
+      // });
+
+
+      // Removing images whent get clicked..
+
+      document.querySelector('#images').addEventListener('click',function(e){
+          console.log(e.target.parentNode);
+          if(e.target.tagName === 'IMG'){
+            
+            let remove = e.target.parentNode
+             remove.remove()
+          }
+         // remove.parentNode.removeChild(remove)
+      },false)
+    </script>
+  </body>
+</html>
