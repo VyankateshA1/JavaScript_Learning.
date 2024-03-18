@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Async Awaits</h1>
+    <button id="btn">Stop</button>
+
+    //
+    <script>
+      const myName = function () {
+        console.log("Vyankatesh");
+      };
+      const changeText = function () {
+        document.querySelector("h1").innerHTML =
+          "Learning concept of Async Awaits";
+      };
+
+      const changeMe = setTimeout(changeText, 2000);
+      document.querySelector("#btn").addEventListener("click", function () {
+        clearTimeout(changeMe);
+        console.log("stopped");
+      });
+    </script>
+  </body>
+</html>
