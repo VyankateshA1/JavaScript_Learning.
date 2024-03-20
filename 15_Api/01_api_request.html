@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api</title>
+  </head>
+  <body>
+    <button class="btn">Get Info</button>
+    <div id="profileCard"></div>
+    <script>
+      //Ajax req
+
+      document.querySelector(".btn").addEventListener("click", function () {
+        const url = "https://api.github.com/users/VyankateshA1";
+
+        const xreq = new XMLHttpRequest();
+        xreq.open("GET", url);
+        xreq.onreadystatechange = function () {
+          console.log("here", xreq.readyState);
+          if (xreq.readyState === 4) {
+            let data = JSON.parse(this.responseText);
+            displayProfile(data);
+            console.log(data.public_repos);
+          }
+        };
+        xreq.send();
+      });
+      function displayProfile(data) {
+        const profileCard = document.getElementById("profileCard");
+        profileCard.innerHTML = `<div>
+                <img src="${data.avatar_url}" style="width: 100px; height:100px;">
+                <p>Followers: ${data.followers}</p>
+    </div>`;
+      }
+    </script>
+  </body>
+</html>
